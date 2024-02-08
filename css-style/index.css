@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* start navbar */
+
+.navbar-expand-lg {
+    position: absolute !important;
+    width: 100%;
+    background-color: transparent !important;
+    backdrop-filter: blur(40px);
+    z-index: 1;
+    --bs-bg-opacity: none !important;
+}
+
+.navbar-expand-lg a {
+    color: #fff !important;
+    font-size: 30px;
+}
+
+
+.navbar-collapse a span {
+    color: #fff !important;
+}
+
+.dropdown-menu .fa-brands {
+    padding-right: 10px;
+}
+
+.navbar-collapse a {
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    color: black !important;
+    text-transform: capitalize;
+    z-index: 1;
+    overflow: hidden;
+    transform: .8s;
+}
+
+.dropdown .dropdown-toggle {
+    color: #fff !important;
+}
+
+.navbar-collapse a:hover {
+    color: #fff !important;
+    font-weight: 600;
+    box-shadow: 0 0 10px #0e385f,
+        0 0 10px #0e385f,
+        0 0 20px #0e385f,
+        0 0 40px #0e385f,
+        0 0 1000px #0e385f;
+}
+
+.navbar-collapse a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 0;
+    height: 100%;
+    background-color: #0e385f;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: .8s;
+}
+
+.navbar-collapse a:hover:before {
+    width: 100%;
+
+}
+
+.navbar-toggler {
+    font-size: 30px !important;
+    color: #fff !important;
+}
+
+/* end navbar */
+
+/* start banner */
+.banner {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../photos/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.banner h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    padding-left: 50px;
+    backdrop-filter: blur(20px);
+
+}
+
+.banner p {
+    width: 500px;
+    color: #fff;
+    font-size: 25px;
+    padding-left: 30px;
+}
+
+/* end banner */
+
+/* start cards read more */
+
+.cards {
+    background-color: #0a1121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.cards .card {
+    margin: 0 30px 30px 0;
+    background-color: #0e385f;
+    color: #fff;
+}
+
+.cards .card i {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+
+/* read more card-1 */
+
+#check {
+    display: none;
+}
+
+.card-body .content {
+    display: none;
+    transition: 1s linear;
+
+}
+
+label {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#check:checked~.content {
+    display: block;
+}
+
+#check:checked~label {
+    visibility: hidden;
+}
+
+#check:checked~label::after {
+    content: ' Less Than';
+    display: block;
+    visibility: visible;
+}
+
+/* read  more card-2*/
+
+#check-2 {
+    display: none;
+}
+
+.card-body .content-2 {
+    display: none;
+    transition: .5s linear;
+
+}
+
+/* labe2 read more */
+.section-2 {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+#check-2:checked~.content-2 {
+    display: block;
+}
+
+#check-2:checked~label {
+    visibility: hidden;
+}
+
+#check-2:checked~label::after {
+    content: ' Less Than';
+    display: block;
+    visibility: visible;
+}
+
+/* read more card-3 */
+
+#check-3 {
+    display: none;
+}
+
+.card-body .content-3 {
+    display: none;
+    transition: .5s linear;
+
+}
+
+/* labe3 read more */
+
+.section-3 {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#check-3:checked~.content-3 {
+    display: block;
+}
+
+#check-3:checked~label {
+    visibility: hidden;
+}
+
+#check-3:checked~label::after {
+    content: ' Less Than';
+    display: block;
+    visibility: visible;
+}
+
+/* end cards read more */
+
+
+/*small cards  */
+.small-cards {
+    background-color: #0a1121;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 300px 300px;
+    gap: 50px;
+    padding: 30px;
+}
+
+.small-cards .card {
+    margin-right: 30px;
+    background-color: #0e385f;
+    color: #fff;
+}
+
+.small-cards .card-text {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 60px;
+}
+
+/* cards photo*/
+
+.card-photo {
+    background-color: #0a1121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.card-photo img {
+    width: 100%;
+    background-color: #0e385f !important;
+}
+
+.card-photo .card-img-top {
+    padding: 30px;
+}
+
+.card-photo .card {
+    background-color: transparent !important;
+    color: #fff;
+    margin-right: 30px;
+}
+
+/* end cards photo */
+
+
+/* last card */
+.last-section {
+    background-color: #0a1121;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.last-card {
+    background-color: #0e385f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    color: #fff;
+
+}
+
+.last-card .card-title {
+    color: #0a1121;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.last-card .card-text {
+    font-size: 15px;
+    width: 70%;
+}
+
+.last-card .right-side a {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.bg-body-tertiary {
+    color: #fff;
+}
+
+
+.bg-body-tertiary a {
+    color: #0e385f;
+}
+
+.bg-body-tertiary .btn-outline {
+    color: #0e385f;
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar-toggler {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .banner {
+        background-size: contain;
+        background-color: #0a1121;
+    }
+
+    .banner h1 {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .banner p {
+        font-size: 20px;
+        max-width: 300px;
+        overflow: hidden;
+    }
+
+    .small-cards {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+}
